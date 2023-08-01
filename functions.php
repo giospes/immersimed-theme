@@ -27,19 +27,21 @@ function enqueue_style() {
     // nel caso sposti il style.css cambia in get_template e il path
     // Enqueue Custom CSS (style.css)
     wp_enqueue_style('style', get_stylesheet_uri(), array('bootstrap'), $version, 'all');
+    wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css', array(), $version, 'all');
+    wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css', array(), $version, 'all');
+
+
 
 }
 add_action('wp_enqueue_scripts', 'enqueue_style');
 
 function enqueue_js() {
-    // Enqueue Bootstrap JS
+    
     $version = wp_get_theme()->get('Version');
-
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.min.js', array(''), '3.7.0', true);
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '5.3.0', true);
-    wp_enqueue_script('popper', get_template_directory_uri() . '/node_modules/@popperjs/core/dist/umd/popper.min.js', array('jquery'), '2.11.8', true);
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.min.js', array(''), $version, true);
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), $version, true);
 
+    wp_enqueue_script('header-js', get_template_directory_uri() . '/assets/js/header.js', array('jquery'), $version, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_js');
 

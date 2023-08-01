@@ -5,13 +5,70 @@ Description: Innovativo, moderno, perfetto per il TOLC-Med
 Author: Giovanni J. Speranza
  */
 
-  
-@font-face {
-    font-family: 'all-round-gothic-demi';
-    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-demi.otf') format('opentype');
+:root {
+    --darker-main-5: #3E5555;
+    --darker-main-4: #445E5D;
+    --darker-main-3: #407776;
+    --darker-main-2: #3C908F;
+    --darker-main: #38A9A8;
+    --main-color: #34C1C1;
+    --lighter-main: #65CECE;
+    --lighter-main-2: #95DBDB;
+    --lighter-main-3: #C5E8E8;
+    --dirty-white: #F5F5F5;
 }
 
+
+
+@font-face {
+    font-family: 'all-round-gothic-demi';
+    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-demi.woff2') format('woff2'),
+        url('./assets/fonts/Fontspring-DEMO-allroundgothic-demi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'all-round-gothic-medium';
+    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-medium.woff2') format('woff2'),
+        url('./assets/fonts/Fontspring-DEMO-allroundgothic-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'all-round-gothic-bold';
+    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-bold.woff2') format('woff2'),
+        url('./assets/fonts/Fontspring-DEMO-allroundgothic-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'all-round-gothic-text';
+    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-text.woff2') format('woff2'),
+        url('./assets/fonts/Fontspring-DEMO-allroundgothic-text.woff') format('woff');
+}
+
+html{
+    font-size: 16px;
+}
+ 
 body {
-    font-family: 'all-round-gothic-demi', sans-serif;
-    font-style: italic;
+    font-family: 'all-round-gothic-medium', sans-serif;
+    font-size: 1rem;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+    .wrapper{
+        padding: 0 2rem;
+    }
 }
