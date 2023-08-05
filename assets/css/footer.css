@@ -1,4 +1,4 @@
-    svg{
+   footer svg{
         stroke: white;
        
     }
@@ -16,7 +16,8 @@
     width: 100%;
     text-align: left;
     font: bold 16px sans-serif;
-    padding: 55px 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   
   .footer-distributed .footer-left,

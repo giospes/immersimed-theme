@@ -5,6 +5,9 @@ Description: Innovativo, moderno, perfetto per il TOLC-Med
 Author: Giovanni J. Speranza
  */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+
 :root {
     --darker-main-5: #3E5555;
     --darker-main-4: #445E5D;
@@ -16,7 +19,11 @@ Author: Giovanni J. Speranza
     --lighter-main-2: #95DBDB;
     --lighter-main-3: #C5E8E8;
     --dirty-white: #F5F5F5;
+    --gothic-demi: 'all-round-gothic-demi', sans-serif;
+    --gothic-bold: 'all-round-gothic-bold', sans-serif;
+    --montserrat: 'Montserrat Alternates', sans-serif;
 }
+
 
 
 
@@ -26,11 +33,6 @@ Author: Giovanni J. Speranza
         url('./assets/fonts/Fontspring-DEMO-allroundgothic-demi.woff') format('woff');
 }
 
-@font-face {
-    font-family: 'all-round-gothic-medium';
-    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-medium.woff2') format('woff2'),
-        url('./assets/fonts/Fontspring-DEMO-allroundgothic-medium.woff') format('woff');
-}
 
 @font-face {
     font-family: 'all-round-gothic-bold';
@@ -38,19 +40,19 @@ Author: Giovanni J. Speranza
         url('./assets/fonts/Fontspring-DEMO-allroundgothic-bold.woff') format('woff');
 }
 
-@font-face {
-    font-family: 'all-round-gothic-text';
-    src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-text.woff2') format('woff2'),
-        url('./assets/fonts/Fontspring-DEMO-allroundgothic-text.woff') format('woff');
-}
-
 html{
-    font-size: 16px;
+    font-size: 16px; 
 }
- 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
-    font-family: 'all-round-gothic-medium', sans-serif;
+    font-family: var(--montserrat);
+    font-weight: 400;
     font-size: 1rem;
+    color: var(--darker-main-5);
 }
 
 ul{
@@ -63,12 +65,44 @@ a{
     text-decoration: none;
 }
 
+figure{
+    margin: 0;
+}
+
+h2{
+    font-family: var(--gothic-bold);
+    font-size: 2rem ;
+}
 .wrapper{
-    padding: 0 1rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0rem;
+    max-width: calc(1400px + 128px)!important;
+}
+
+
+
+@media (min-width: 570px) {
+    .wrapper{
+        padding: 0 16px;
+    }
 }
 
 @media (min-width: 992px) {
     .wrapper{
-        padding: 0 2rem;
+        padding: 0 32px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper{
+        padding: 0 48px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .wrapper{
+        padding: 0 64px;
+
     }
 }

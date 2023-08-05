@@ -1,7 +1,7 @@
 <?php session_start();?> 
-</div>
-<footer class="footer-distributed">
 
+<footer class="footer-distributed">
+  <div class="wrapper">
       <div class="footer-left">
     <div id="footer-logo-bg">
 
@@ -80,7 +80,7 @@
         </div>
 
       </div>
-
+      </div>
     </footer>
     <?php   wp_footer(); ?>
 </body>

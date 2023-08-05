@@ -1,0 +1,511 @@
+main{
+    position: relative;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.med{
+    color: var(--darker-main);
+}
+.hero{
+    position: relative;
+    text-align: center;
+    border-radius: 38px; 
+    background: radial-gradient(64.63% 30.29% at 50.00% 41.11%, #95DBDB 20.67%, #38A9A8 74.43%);
+    padding: 30px 32px;
+    display: grid; 
+    gap: 38px;
+    grid-template-columns: 1fr; /* Three equal columns */
+    justify-content: center; /* Horizontally center the grid items */
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    z-index: 2;
+    margin-bottom:  64px ;
+}
+
+
+h1{
+    font-family: 'all-round-gothic-demi', sans-serif ;
+    
+    font-size: 2.7rem;
+    line-height: 120%;
+    
+
+}
+
+.hero img{
+    width: 200px;
+}
+
+.hero .image-container {
+    width: 300px; /* Set the desired width for the cropped image */
+    height: 180px; /* Set the desired height for the cropped image */
+    overflow: hidden; /* Hide any content that overflows the container */
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop the image to fit the container while maintaining aspect ratio */
+    object-position: -30% 65%;
+}
+
+.hero p{
+    color: #FFF;
+    /* text-align: center; */
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; 
+}
+
+.hero .cta-button{
+    margin: 16px auto;
+    background-color: white;
+    padding: 12px 0;
+    color: var(--darker-main-5);
+    font-family: var(--montserrat);
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 16px;
+
+}
+
+.hero figure{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.circle-img-container{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.circle-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero figcaption{
+    margin-top: 16px;
+    font-size: 1rem;
+}
+
+.circle-container-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-left: 60px; 
+}
+.circle-img-container:first-child{
+    position: relative;
+    z-index: 3;
+}
+
+.circle-img-container:nth-child(2){
+    position: relative;
+    left: -50%;
+    z-index: 2;
+}
+.circle-img-container:nth-child(3){
+    position: relative;
+    left: -50%;
+    z-index: 3;
+}
+.under-hero{
+    display: none;
+}
+
+
+
+
+figure {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* sezione 2 perchè immersimed */
+
+.per-immersimed{
+    padding: 48px 32px 0 32px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 56px;
+}
+
+
+
+h2{
+    font-size: 3rem;
+}
+
+
+.per-immersimed p{
+    padding-top: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.per-immersimed .card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 32px;
+}
+
+.per-immersimed .card{
+    width: 100%;
+    max-width: 270px;
+    max-height: 375px;
+    border-radius: 48px;
+    background-color: var(--dirty-white);
+    box-shadow: 0px 10px 50px 0px rgba(52, 193, 193, 0.30);
+}
+
+
+
+.per-immersimed .card-head{
+    width: 100%;
+    height: 150px;
+    border-radius: 38px;
+    overflow: hidden;
+}
+
+.per-immersimed .card-head img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.per-immersimed .card-body{
+    padding: 10px 32px 24px 32px;
+    font-size: 1.5rem ;
+    line-height: 130%;
+}
+
+.card-number-title{
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding-bottom: 14px;
+    padding-top: 16px;
+
+}
+
+/* sezione 3 vantaggi corso */
+.vantaggi{
+    padding-top: 64px;
+}
+
+@media (min-width: 650px) {
+    .hero{  
+        padding: 28px 36px;
+        background: radial-gradient(83.80% 39.28% at 50.00% 46.09%, #95DBDB 20.67%, #38A9A8 74.43%);
+    }
+    h1{
+        font-size: 4rem ;
+    }
+
+    .hero .image-container {
+        width: 500px; /* Set the desired width for the cropped image */
+        height: 300px; /* Set the desired height for the cropped image */
+        
+        margin: 16px auto 18px auto;
+    }
+    
+    .image-container img {
+        
+         object-position: -30% 65%;
+    }
+
+    .hero p{
+        font-size: 1.8rem;
+
+        line-height: 130%;
+    }
+
+    .hero figure{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .circle-img-container{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .circle-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero figcaption{
+        margin-top: 16px;
+        font-size: 1.1rem;
+    }
+
+    .circle-container-wrapper{
+        display: flex;
+        justify-content: center;
+        padding-left: 100px; 
+    }
+    .circle-img-container:first-child{
+        position: relative;
+        z-index: 3;
+    }
+
+    .circle-img-container:nth-child(2){
+        position: relative;
+        left: -50%;
+        z-index: 2;
+    }
+    .circle-img-container:nth-child(3){
+        position: relative;
+        left: -50%;
+        z-index: 3;
+    }
+    .hero .cta-button{
+        max-width: 500px;
+        padding: 16px 0;
+        margin: 30;
+        font-size: 2rem;
+    }
+
+  
+} 
+
+@media (min-width: 794px) {
+    .hero {
+        background: radial-gradient(71.18% 33.36% at 50.00% 42.58%, #95DBDB 20.67%, #38A9A8 74.43%);
+
+    }
+
+    /* sezione 2 perchè immersimed */
+    .per-immersimed .card-container{
+        flex-direction: row;
+        gap: 32px;
+        padding-top: 16px;
+
+    } 
+    .shifted{
+        margin-top: 75px;
+    }
+
+    
+}
+
+@media (min-width: 992px) {
+    main{
+        text-align: left;
+    }
+    .hero{
+        overflow: visible;
+        z-index: 1;
+        padding: 28px 0 0 38px;
+        text-align: left;
+        grid-template-columns: 4fr 3fr;
+        gap: 16px 80px;
+        border-radius: 48px 48px 300px 48px;
+        background: linear-gradient(56deg, #38A9A8 0%, #C5E8E8 100%);
+        margin-bottom: calc(64px + 60px);
+    }
+
+    h1{
+        grid-column: 1 / 2;
+    }
+
+    .hero .image-container{
+        grid-column: 2 / 3;
+        grid-row: 1/5;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 300px 0;
+        margin: 0;
+    }
+
+    .hero .image-container img {
+        object-position: 70% -30%;
+        margin: 0;
+    }
+
+    .hero p{
+        grid-column: 1 / 2;
+        margin: 0;
+    }
+
+    .hero .cta-button{
+        grid-column: 1/2;
+        margin: 48px 0;
+        width: 300px;
+        
+    }
+
+    .hero figure{
+        flex-direction: row;
+        align-items: center; 
+        grid-column: 1/2;
+        margin-bottom: 32px;
+    }
+
+    .hero figcaption{
+        margin: 0;
+    }
+
+    .circle-container-wrapper{
+        padding: 0;
+        position: relative;
+        margin-right: 50px ;
+
+    }
+
+    .circle-img-container:nth-child(2){
+        position: absolute;
+        left: 50%;
+    }
+    .circle-img-container:nth-child(3){
+        position: absolute;
+        left: 100%
+    }
+   
+    .under-hero{
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        top: 221px;
+        width: calc(100% - 64px);
+        height: 500px;
+        border-radius: 48px 48px 300px 48px;
+        background-color: var(--dirty-white);
+        z-index: -1;
+    }
+
+    .under-hero .content{
+        display: flex;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        padding-left: 38px; 
+        padding-right: 250px; 
+    }
+
+    .under-hero .content span{
+        min-width: 150px;
+        font-size: 1.3rem;
+    }
+
+    .under-hero .content figure{
+        padding-left: 16px ;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;    
+    }
+    /* sezione 2 perchè immersimed */
+    .per-immersimed{
+        text-align: center;
+    }
+
+}
+
+
+   
+
+
+  
+
+@media (min-width:1200px){
+    .under-hero{
+        width: calc(100% - 96px)
+
+    } 
+    /* sezione 2 perchè immersimed */
+    .per-immersimed{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 48px;
+        justify-content: space-between;
+    }
+
+    .per-immersimed .text-container{
+        text-align: left;
+        width: 280px;
+    }
+
+    .per-immersimed .card-container{
+        padding-top: 16px;
+        
+    }
+    
+} 
+
+@media (min-width:1278px){
+    .under-hero{
+        top: 183px;
+
+    } 
+}
+
+@media (min-width:1400px){
+    .hero{
+        gap: 24px 90px;
+
+    }
+    .hero .cta-button{
+        margin: 60px 0;
+        
+    }
+    .under-hero{
+        top: 232px;
+        width: calc(100% - 128px)
+    } 
+
+    /* sezione 2 perchè immersimed */
+    .per-immersimed .text-container{
+        width: 350px;
+    }
+    
+}
+@media (min-width:1464px){
+    h2{
+        font-size: 3.2rem;
+    }
+    .under-hero{
+        top: 152px;
+
+    }
+
+    /* sezione 2 perchè immersimed */
+    .per-immersimed{
+        gap: 54px;
+    }
+    .per-immersimed .text-container{
+        width: 400px;
+    }
+    
+    
+    
+    .per-immersimed p{
+        font-size: 1.6rem;
+    };
+} 

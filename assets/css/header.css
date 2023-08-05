@@ -1,6 +1,9 @@
 /* Mobile styles */
 header{
     font-family: 'all-round-gothic-demi', sans-serif;
+    max-width: calc(1400px + 128px );
+    margin: auto;
+    
     
 }
 
@@ -9,11 +12,13 @@ header a{
 }
 
 .gs-navbar{
+    
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
+    padding: 10px 16px;
 }
 
 
@@ -30,6 +35,10 @@ header a{
         right: 0;
         z-index: 999;
     }
+    .header-buttons{
+        display: flex;
+        align-items: center;
+    }
     .gs-navbar-toggler {
         padding: 0;
         display: block;
@@ -44,7 +53,8 @@ header a{
     
     .gs-navbar-toggler svg {
         width: 100%;
-        color: var(--darker-main-5);
+        fill: var(--darker-main-5);
+        stroke: var(--darker-main-5);
 
     }
     
@@ -63,12 +73,13 @@ header a{
    
 
     #nav-cta{
-        font-family: 'all-round-gothic-bold', sans-serif;
+        font-family: var(--montserrat);
+        font-weight: 700;
         font-size:.8rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 90px;
+        width: 100px;
         height: 32px;
         flex-shrink: 0;
         border-radius: 8px;
@@ -89,12 +100,17 @@ header a{
     }
    
     @media (max-width: 600px) {
-        picture img{
+        header picture img{
             max-width: 250px ;
         }
     }
+   
+
 /* Desktop styles */
 @media (min-width: 992px) {
+    .gs-navbar{
+        padding: 10px 32px;
+    }
     #nav-cta{
 
         display: flex;
@@ -107,9 +123,7 @@ header a{
         border: 2px solid #000;
     }
 
-    .header{
-        padding: 10px 20px;
-    }
+  
 
     .gs-navbar-menu {
         display: inline-block;
@@ -135,8 +149,9 @@ header a{
         border: 3px solid #000;
     }
 
-    header{
+    .gs-navbar{
         font-size: 1.1rem;
+        padding: 10px 48px;
     }
 
     
@@ -151,10 +166,12 @@ header a{
         border: 3px solid #000;
     }
 
-    header{
-        padding: 15px 70px;
+    .gs-navbar{
+        padding: 15px 64px;
         font-size: 1.4rem;
     }
 
     
 }
+
+
