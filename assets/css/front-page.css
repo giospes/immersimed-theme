@@ -210,7 +210,29 @@ h2{
 
 /* sezione 3 vantaggi corso */
 .vantaggi{
-    padding-top: 64px;
+    padding: 64px 32px 0;
+}
+
+.vantaggi h2{
+    margin-bottom: 48px;
+}
+
+.vantaggio{
+    margin-bottom: 32px;
+}
+
+.vantaggio .mobile-image-container{
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.vantaggio .mobile-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 @media (min-width: 650px) {
@@ -459,7 +481,7 @@ h2{
     
 } 
 
-@media (min-width:1278px){
+@media (min-width:1237px){
     .under-hero{
         top: 183px;
 

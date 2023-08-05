@@ -303,7 +303,7 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'settings' => 'front_page_vant_vant_1_img',
             )));
             
-            $wp_customize->add_setting('front_page_vant_vant_1_desciption', array(
+            $wp_customize->add_setting('front_page_vant_vant_1_description', array(
                 'default' => '',
                 'sanitize_callback' => 'wp_kses_post',
             ));
@@ -313,6 +313,74 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'section' => 'vantaggi_section',
                 'label' => 'vantaggio 1 Description',
             ));
+
+            $wp_customize->add_setting('front_page_vant_vant_2_title', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_vant_vant_2_title', array(
+                'type' => 'textarea',
+                'section' => 'vantaggi_section',
+                'label' => 'vantaggio 2 Title',
+            ));
+
+            $wp_customize->add_setting('front_page_vant_vant_2_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_vant_vant_2_img', array(
+                'label' => 'Vantaggio 2 Image',
+                'section' => 'vantaggi_section',
+                'settings' => 'front_page_vant_vant_2_img',
+            )));
+            
+            $wp_customize->add_setting('front_page_vant_vant_2_description', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_vant_vant_2_description', array(
+                'type' => 'textarea',
+                'section' => 'vantaggi_section',
+                'label' => 'vantaggio 2 Description',
+            ));
+
+            $wp_customize->add_setting('front_page_vant_vant_3_title', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_vant_vant_3_title', array(
+                'type' => 'textarea',
+                'section' => 'vantaggi_section',
+                'label' => 'vantaggio 3 Title',
+            ));
+
+            $wp_customize->add_setting('front_page_vant_vant_3_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_vant_vant_3_img', array(
+                'label' => 'Vantaggio 3 Image',
+                'section' => 'vantaggi_section',
+                'settings' => 'front_page_vant_vant_3_img',
+            )));
+            
+            $wp_customize->add_setting('front_page_vant_vant_3_description', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_vant_vant_3_description', array(
+                'type' => 'textarea',
+                'section' => 'vantaggi_section',
+                'label' => 'vantaggio 3 Description',
+            ));
+
+            
 
     
 }

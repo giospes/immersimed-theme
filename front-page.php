@@ -105,16 +105,52 @@
         $van_1_description = get_theme_mod('front_page_vant_vant_1_description', '');
         $van_1_url = get_theme_mod('front_page_vant_vant_1_img', '');
         $van_1_alt = get_alt($van_1_url);
+        $van_2_title = get_theme_mod('front_page_vant_vant_2_title', '');
+        $van_2_description = get_theme_mod('front_page_vant_vant_2_description', '');
+        $van_2_url = get_theme_mod('front_page_vant_vant_2_img', '');
+        $van_2_alt = get_alt($van_2_url);
+        $van_3_title = get_theme_mod('front_page_vant_vant_3_title', '');
+        $van_3_description = get_theme_mod('front_page_vant_vant_3_description', '');
+        $van_3_url = get_theme_mod('front_page_vant_vant_3_img', '');
+        $van_3_alt = get_alt($van_3_url);
     ?>
     <section class="vantaggi">
         <h2><?php echo wp_kses_post($van_section_title); ?></h2>
         <div class="vantaggio">
             <div class="content">
-            <h3>Esplora il corpo umano</h3>
-                <div class="mobile-img-container">
-                    <img src="" alt="">
+                <h3><?php echo wp_kses_post($van_1_title); ?></h3>
+                <div class="mobile-image-container">
+                    <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>" >
                 </div>
-                <p>I visori che forniamo ti permettono di entrare in organi e apparti per osservarne il funzionamento</p>
+                <p><?php echo wp_kses_post($van_1_description); ?></p>
+            </div>
+           
+            <div class="desktop-img-container">
+                <img src="" alt="">
+            </div>
+
+        </div>
+        <div class="vantaggio">
+            <div class="content">
+                <h3><?php echo wp_kses_post($van_1_title); ?></h3>
+                <div class="mobile-image-container">
+                    <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>" >
+                </div>
+                <p><?php echo wp_kses_post($van_1_description); ?></p>
+            </div>
+           
+            <div class="desktop-img-container">
+                <img src="" alt="">
+            </div>
+
+        </div>
+        <div class="vantaggio">
+            <div class="content">
+                <h3><?php echo wp_kses_post($van_1_title); ?></h3>
+                <div class="mobile-image-container">
+                    <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>" >
+                </div>
+                <p><?php echo wp_kses_post($van_1_description); ?></p>
             </div>
            
             <div class="desktop-img-container">
