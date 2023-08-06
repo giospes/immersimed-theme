@@ -380,6 +380,156 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'label' => 'vantaggio 3 Description',
             ));
 
+            $wp_customize->add_setting('front_page_vant_cta', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_vant_cta', array(
+                'type' => 'text',
+                'section' => 'vantaggi_section',
+                'label' => 'CTA text',
+            ));
+
+
+        $wp_customize->add_section(new WP_Customize_Section($wp_customize, 'faq_section', array(
+            'title' => 'FAQ Section',
+            'priority' => 11, // Adjust the priority to position the nested section
+            'panel' => 'front_page_panel', // Specify the parent section's ID
+        )));
+
+            $wp_customize->add_setting('front_page_faq_section_title', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_section_title', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'Section Title',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_q_1', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_q_1', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'Question 1',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_a_1', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_faq_a_1', array(
+                'type' => 'textarea',
+                'section' => 'faq_section',
+                'label' => 'Answer 1',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_q_2', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_q_2', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'Question 2',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_a_2', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_faq_a_2', array(
+                'type' => 'textarea',
+                'section' => 'faq_section',
+                'label' => 'Answer 2',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_q_3', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_q_3', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'Question 3',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_a_3', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_faq_a_3', array(
+                'type' => 'textarea',
+                'section' => 'faq_section',
+                'label' => 'Answer 3',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_q_4', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_q_4', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'Question 4',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_a_4', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_faq_a_4', array(
+                'type' => 'textarea',
+                'section' => 'faq_section',
+                'label' => 'Answer 4',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_q_5', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_q_5', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'Question 5',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_a_5', array(
+                'default' => '',
+                'sanitize_callback' => 'wp_kses_post',
+            ));
+
+            $wp_customize->add_control('front_page_faq_a_5', array(
+                'type' => 'textarea',
+                'section' => 'faq_section',
+                'label' => 'Answer 5',
+            ));
+
+            $wp_customize->add_setting('front_page_faq_cta_text', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_faq_cta_text', array(
+                'type' => 'text',
+                'section' => 'faq_section',
+                'label' => 'CTA text',
+            ));
+
             
 
     

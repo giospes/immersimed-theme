@@ -71,7 +71,12 @@ figure{
 
 h2{
     font-family: var(--gothic-bold);
-    font-size: 2rem ;
+    font-size: 3rem ;
+}
+
+h3{
+    font-family: var(--gothic-demi);
+    font-size: 2rem;
 }
 .wrapper{
     width: 100%;

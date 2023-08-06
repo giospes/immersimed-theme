@@ -140,7 +140,7 @@ figure {
 /* sezione 2 perchè immersimed */
 
 .per-immersimed{
-    padding: 48px 32px 0 32px ;
+    padding: 0px 32px  ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,30 +210,151 @@ h2{
 
 /* sezione 3 vantaggi corso */
 .vantaggi{
-    padding: 64px 32px 0;
+    padding: 64px 32px 48px;
+    background: rgba(52, 193, 193, 0.1);
+    box-shadow: 0px 4px 50px 0px rgba(52, 193, 193, 0.5);
 }
 
 .vantaggi h2{
-    margin-bottom: 48px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .vantaggio{
     margin-bottom: 32px;
+
 }
 
-.vantaggio .mobile-image-container{
+
+.vantaggio p{
+    font-size: 1.3rem;
+    line-height: 135%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.vt-image-container{
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     aspect-ratio: 1/1;
+    margin: 16px auto;
     overflow: hidden;
+    border-radius: 48px;
 }
 
-.vantaggio .mobile-image-container img{
+.vt-image-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 
 }
+
+.vt-desktop{
+    display: none;
+}
+
+.big-cta-button{
+    padding: 12px 0;
+    margin: 40px auto 0;
+    color: white;
+    background-color: var(--main-color);
+    font-family: var(--montserrat);
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 16px;
+}
+
+/* sezione 5 */
+
+.faq{
+    padding: 60px 32px;
+    text-align: left;
+}
+.faq h2{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+}
+
+.accordion-item {
+    background-color: var(--darker-main);
+    margin-bottom: 8px;
+    border-radius: 30px;
+    padding: 24px;
+}
+.accordion-header span{
+    width: 30px;
+    height: 30px;
+    margin-left: 16px;
+    overflow: hidden;
+}
+.accordion-header span svg{
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: scale(1.3);
+    object-fit: cover;
+    color: white;
+    transition: transform 0.3s;
+
+    
+}
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darker-main);
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 0px;
+    transition: padding-bottom 0.3s ease;
+
+}
+
+.accordion-content {
+    max-height: 0; /* Start with the content hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+   
+}
+.accordion-content p {
+   padding-top: 5px;
+   transition: padding-top 0.3s ease;
+}
+.accordion-item.active p {
+    padding-top: 16px;
+}
+.accordion-item.active .accordion-content {
+
+    max-height: 1000px;
+}
+
+.accordion-item.active .accordion-header {
+    padding-bottom: 16px;
+}
+
+.accordion-item.active .accordion-header span svg{
+    transform: scale(1.3) rotate(90deg);
+    
+}
+
+
 
 @media (min-width: 650px) {
     .hero{  
@@ -314,7 +435,8 @@ h2{
         font-size: 2rem;
     }
 
-  
+    
+    
 } 
 
 @media (min-width: 794px) {
@@ -334,7 +456,46 @@ h2{
         margin-top: 75px;
     }
 
+    /* sezione 3 vantaggi corso */
+    .vantaggio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .vt-mobile{
+        display: none;
+
+    }
+    .vt-desktop{
+        display: block;
+    }
     
+    .vt-image-container{
+        width: 100%;
+        max-width: 350px;
+        margin: 0;
+    }
+    .vantaggio .content{
+        width: 100%;
+        max-width: 350px ;
+        text-align: left;
+    }
+    .vantaggio:nth-child(odd) .vt-desktop{
+        order: 2;
+    }
+
+    .vantaggi h2{
+        margin-bottom: 56px;
+    } 
+
+    .big-cta-button{
+        font-size: 2.2rem;
+        max-width: 500px;
+        margin-top: 56px;
+
+    }
 }
 
 @media (min-width: 992px) {
@@ -447,6 +608,8 @@ h2{
     .per-immersimed{
         text-align: center;
     }
+    /* sezione 3 vantaggi corso */
+    
 
 }
 
