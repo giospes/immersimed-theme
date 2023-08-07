@@ -119,6 +119,16 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'label' => 'Front Page Desktop Hero Image',
             )));
 
+            $wp_customize->add_setting('front_page_hero_tablet_image', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_hero_tablet_image', array(
+                'section' => 'front_page_hero',
+                'label' => 'Front Page tablet Hero Image',
+            )));
+
             $wp_customize->add_setting('front_page_hero_mobile_image', array(
                 'default' => '',
                 'sanitize_callback' => 'esc_url_raw',
@@ -164,6 +174,43 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'section' => 'front_page_hero',
                 'label' => 'Front Page Hero Social Proof',
             ));
+
+            $wp_customize->add_setting('front_page_hero_soc_proof_img_1', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_hero_soc_proof_img_1', array(
+                'section' => 'front_page_hero',
+                'label' => 'Social Proof 1 img',
+            )));
+
+            $wp_customize->add_setting('front_page_hero_soc_proof_img_2', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_hero_soc_proof_img_2', array(
+                'section' => 'front_page_hero',
+                'label' => 'Social Proof 2 img',
+            )));
+
+            $wp_customize->add_setting('front_page_hero_soc_proof_img_3', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_hero_soc_proof_img_3', array(
+                'section' => 'front_page_hero',
+                'label' => 'Social Proof 3 img',
+            )));
+
+            
+
+
+
+            
+
             $wp_customize->add_setting('front_page_under_hero_image_1', array(
                 'default' => '',
                 'sanitize_callback' => 'esc_url_raw',

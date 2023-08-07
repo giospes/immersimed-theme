@@ -3,10 +3,16 @@
     $h1_text = get_theme_mod('front_page_h1', '');
     $desktop_hero_img_url = get_theme_mod('front_page_hero_desktop_image', '');
     $mobile_hero_img_url = get_theme_mod('front_page_hero_mobile_image', '');
+    $tablet_hero_img_url = get_theme_mod('front_page_hero_tablet_image', '');
     $hero_text = get_theme_mod('front_page_hero_text', '');
     $hero_cta_text = get_theme_mod('front_page_hero_cta', '');
     $hero_social_proof = get_theme_mod('front_page_hero_social_proof', '');
-    $desktop_logo_url = get_theme_mod( 'desktop_logo', ''); 
+    $hero_social_proof_img_1 = get_theme_mod('front_page_hero_soc_proof_img_1', '');
+    $hero_social_proof_img_1_alt= get_alt($hero_social_proof_img_1);
+    $hero_social_proof_img_2 = get_theme_mod('front_page_hero_soc_proof_img_2', '');
+    $hero_social_proof_img_2_alt= get_alt($hero_social_proof_img_2);
+    $hero_social_proof_img_3 = get_theme_mod('front_page_hero_soc_proof_img_3', '');
+    $hero_social_proof_img_3_alt= get_alt($hero_social_proof_img_3);
     $sponsor_1_url= get_theme_mod( 'front_page_under_hero_image_1', ''); 
     $sponsor_1_alt = get_alt($sponsor_1_url);
     $sponsor_3_url= get_theme_mod( 'front_page_under_hero_image_3', ''); 
@@ -23,8 +29,9 @@
                 <div class="image-container">
                     <picture>
                         <!-- Mobile Image -->
-                        <source media="(max-width: 992px)" srcset="<?php echo esc_url($mobile_hero_img_url); ?>">
-                        
+                        <source media="(max-width: 650px)" srcset="<?php echo esc_url($mobile_hero_img_url); ?>" width="300" height="180">
+                        <!-- Tablet Image -->
+                        <source media="(max-width: 992px)" srcset="<?php echo esc_url($tablet_hero_img_url); ?>" width="500" height="300">
                         <!-- Desktop Image -->
                         <source media="(min-width: 992px)" srcset="<?php echo esc_url($desktop_hero_img_url); ?>">
 
@@ -39,13 +46,13 @@
             <figure id="hero-social-proof">
                 <div class="circle-container-wrapper" >
                     <div class="circle-img-container">
-                        <img  src="<?php echo get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto" loading="lazy">
+                        <img  src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_1_alt); ?>" loading="lazy">
                     </div> 
                     <div class="circle-img-container">
-                        <img  src="<?php echo  get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto" loading="lazy">
+                        <img  src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_2_alt); ?>" loading="lazy">
                     </div>  
                     <div class="circle-img-container">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto" loading="lazy"v>
+                        <img src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt=<?php echo esc_url($hero_social_proof_img_3_alt); ?>" loading="lazy"v>
                     </div> 
                 </div>
                 <figcaption><?php echo wp_kses_post($hero_social_proof); ?> </figcaption>
@@ -88,19 +95,19 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-head">
-                        <img src="<?php echo esc_url($per_card_1_url); ?>" alt="<?php echo esc_attr($per_card_1_alt); ?>" width="300" loading="lazy">
+                        <img src="<?php echo esc_url($per_card_1_url); ?>" alt="<?php echo esc_attr($per_card_1_alt); ?>" height="150" loading="lazy">
                     </div>
                     <p class="card-body"><?php echo wp_kses_post($per_card_1_text); ?></p>
                 </div>
                 <div class="card shifted">
                     <div class="card-head ">
-                        <img src="<?php echo esc_url($per_card_2_url); ?>" alt="<?php echo esc_attr($per_card_2_alt); ?>" width="300" loading="lazy">
+                        <img src="<?php echo esc_url($per_card_2_url); ?>" alt="<?php echo esc_attr($per_card_2_alt); ?>" height="150" loading="lazy">
                     </div>
                     <p class="card-body"><?php echo wp_kses_post($per_card_2_text); ?></p>
                 </div>
                 <div class="card">
                     <div class="card-head">
-                        <img src="<?php echo esc_url($per_card_3_url); ?>" alt="<?php echo esc_attr($per_card_3_alt); ?>" width="300" loading="lazy">
+                        <img src="<?php echo esc_url($per_card_3_url); ?>" alt="<?php echo esc_attr($per_card_3_alt); ?>" height="150" loading="lazy">
                     </div>
                     <p class="card-body"><?php echo wp_kses_post($per_card_3_text); ?></p>
                 </div>
@@ -128,12 +135,12 @@
             <h2><?php echo wp_kses_post($van_section_title); ?></h2> 
             <div class="vantaggio">
                 <div class="vt-image-container vt-desktop">
-                    <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>">
+                    <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>" width='350' height='350'>
                 </div>
                 <div class="content">
                     <h3><?php echo wp_kses_post($van_1_title); ?></h3>
                     <div  class="vt-image-container vt-mobile">
-                        <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>" >
+                        <img src="<?php echo esc_url($van_1_url); ?>" alt="<?php echo esc_attr($van_1_alt); ?>" width='300' height='300'>
                     </div>
                     <p><?php echo wp_kses_post($van_1_description); ?></p>
                 </div>
@@ -196,31 +203,31 @@
                 </div> 
                 <div class="recensioni-cards">
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_1_img_url); ?>" alt="<?php echo esc_attr($rece_1_img_alt); ?> " loading="lazy">
+                        <img src="<?php echo esc_url($rece_1_img_url); ?>" alt="<?php echo esc_attr($rece_1_img_alt); ?> " loading="lazy" width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_2_img_url); ?>" alt="<?php echo esc_attr($rece_2_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_2_img_url); ?>" alt="<?php echo esc_attr($rece_2_img_alt); ?>" loading="lazy"  width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_3_img_url); ?>" alt="<?php echo esc_attr($rece_3_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_3_img_url); ?>" alt="<?php echo esc_attr($rece_3_img_alt); ?>" loading="lazy"  width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_4_img_url); ?>" alt="<?php echo esc_attr($rece_4_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_4_img_url); ?>" alt="<?php echo esc_attr($rece_4_img_alt); ?>" loading="lazy" width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_5_img_url); ?>" alt="<?php echo esc_attr($rece_5_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_5_img_url); ?>" alt="<?php echo esc_attr($rece_5_img_alt); ?>" loading="lazy" width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_6_img_url); ?>" alt="<?php echo esc_attr($rece_6_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_6_img_url); ?>" alt="<?php echo esc_attr($rece_6_img_alt); ?>" loading="lazy" width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_7_img_url); ?>" alt="<?php echo esc_attr($rece_7_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_7_img_url); ?>" alt="<?php echo esc_attr($rece_7_img_alt); ?>" loading="lazy" width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_8_img_url); ?>" alt="<?php echo esc_attr($rece_8_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_8_img_url); ?>" alt="<?php echo esc_attr($rece_8_img_alt); ?>" loading="lazy" width="250" height="375">
                     </div>
                     <div class="entry">
-                        <img src="<?php echo esc_url($rece_9_img_url); ?>" alt="<?php echo esc_attr($rece_9_img_alt); ?>" loading="lazy">
+                        <img src="<?php echo esc_url($rece_9_img_url); ?>" alt="<?php echo esc_attr($rece_9_img_alt); ?>" loading="lazy" width="250" height="375">
                     </div>
                 </div>
             </div>
