@@ -164,6 +164,35 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'section' => 'front_page_hero',
                 'label' => 'Front Page Hero Social Proof',
             ));
+            $wp_customize->add_setting('front_page_under_hero_image_1', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_under_hero_image_1', array(
+                'section' => 'front_page_hero',
+                'label' => 'Parlano di noi 1 img',
+            )));
+
+            $wp_customize->add_setting('front_page_under_hero_image_2', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_under_hero_image_2', array(
+                'section' => 'front_page_hero',
+                'label' => 'Parlano di noi 2 img',
+            )));
+
+            $wp_customize->add_setting('front_page_under_hero_image_3', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_under_hero_image_3', array(
+                'section' => 'front_page_hero',
+                'label' => 'Parlano di noi 3 img',
+            )));
 
         //perchè section
         $wp_customize->add_section(new WP_Customize_Section($wp_customize, 'per_section', array(
@@ -390,6 +419,125 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'section' => 'vantaggi_section',
                 'label' => 'CTA text',
             ));
+
+
+        $wp_customize->add_section(new WP_Customize_Section($wp_customize, 'recensioni_section', array(
+            'title' => 'Recensioni Section',
+            'priority' => 12, // Adjust the priority to position the nested section
+            'panel' => 'front_page_panel', // Specify the parent section's ID
+        )));
+
+            $wp_customize->add_setting('front_page_rece_section_title', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('front_page_rece_section_title', array(
+                'type' => 'text',
+                'section' => 'recensioni_section',
+                'label' => 'Section Title',
+            ));
+
+            $wp_customize->add_setting('front_page_rece_1_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_1_img', array(
+                'label' => 'Recensione 1 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_1_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_2_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_2_img', array(
+                'label' => 'Recensione 2 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_2_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_3_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_3_img', array(
+                'label' => 'Recensione 3 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_3_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_4_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_4_img', array(
+                'label' => 'Recensione 4 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_4_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_5_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_5_img', array(
+                'label' => 'Recensione 5 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_5_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_6_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_6_img', array(
+                'label' => 'Recensione 6 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_6_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_7_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_7_img', array(
+                'label' => 'Recensione 7 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_7_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_8_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_8_img', array(
+                'label' => 'Recensione 8 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_8_img',
+            )));
+
+            $wp_customize->add_setting('front_page_rece_9_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'front_page_rece_9_img', array(
+                'label' => 'Recensione 9 img',
+                'section' => 'recensioni_section',
+                'settings' => 'front_page_rece_9_img',
+            )));
+
+
 
 
         $wp_customize->add_section(new WP_Customize_Section($wp_customize, 'faq_section', array(

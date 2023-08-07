@@ -31,6 +31,7 @@ Author: Giovanni J. Speranza
     font-family: 'all-round-gothic-demi';
     src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-demi.woff2') format('woff2'),
         url('./assets/fonts/Fontspring-DEMO-allroundgothic-demi.woff') format('woff');
+    font-display: swap;
 }
 
 
@@ -38,6 +39,7 @@ Author: Giovanni J. Speranza
     font-family: 'all-round-gothic-bold';
     src: url('./assets/fonts/Fontspring-DEMO-allroundgothic-bold.woff2') format('woff2'),
         url('./assets/fonts/Fontspring-DEMO-allroundgothic-bold.woff') format('woff');
+    font-display: swap;
 }
 
 html{

@@ -145,7 +145,7 @@ figure {
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    margin-bottom: 56px;
+    margin-bottom: 64px;
 }
 
 
@@ -210,7 +210,7 @@ h2{
 
 /* sezione 3 vantaggi corso */
 .vantaggi{
-    padding: 64px 32px 48px;
+    padding: 64px 32px;
     background: rgba(52, 193, 193, 0.1);
     box-shadow: 0px 4px 50px 0px rgba(52, 193, 193, 0.5);
 }
@@ -269,11 +269,76 @@ h2{
     border-radius: 16px;
 }
 
+/* sezione 4 recensione */
+.recensioni{
+    padding: 64px 32px;
+}
+
+.recensioni h2{
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.recensioni-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.recensioni-cards{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 25s infinite alternate linear;  
+}
+
+.entry{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    aspect-ratio: 2/3;
+    margin: 0 16px;
+    background: #fff;
+    border-radius: 48px;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.entry img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+    
+@keyframes carouselAnim {
+    from {
+    transform: translate(0, 0);
+    }
+    to {
+    transform: translate(calc(-100% + (2 * 250px)));
+    }
+}
+
+.recensioni-cards:hover {
+    animation-play-state: paused;
+}
+
+.recensioni-cards .faders{
+    display: none;
+}
+  
+
 /* sezione 5 */
 
 .faq{
-    padding: 60px 32px;
+    padding: 64px 32px;
     text-align: left;
+    background: rgba(52, 193, 193, 0.1);
+    box-shadow: 0px 4px 50px 0px rgba(52, 193, 193, 0.5);
 }
 .faq h2{
     text-align: center;
@@ -354,7 +419,33 @@ h2{
     
 }
 
-
+@media (min-width: 425px){
+    /* sezione 4 */
+    .recensioni-container .faders{
+        display: block;
+    }
+    .recensioni-container .faders {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+    }
+      
+    .faders .right, .faders .left {
+        width: 10%;
+        height: 100%;
+        position: absolute;
+        z-index: 200;
+    }
+      
+    .faders .right {
+        right: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .faders .left {
+        left: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+}
 
 @media (min-width: 650px) {
     .hero{  
@@ -435,6 +526,10 @@ h2{
         font-size: 2rem;
     }
 
+    /* sezione 4 */
+    .recensioni-cards{
+        animation: carouselAnim 20s infinite alternate linear;  
+    }
     
     
 } 
@@ -463,7 +558,7 @@ h2{
         justify-content: center;
         gap: 32px;
     }
-
+    
     .vt-mobile{
         display: none;
 
@@ -496,6 +591,8 @@ h2{
         margin-top: 56px;
 
     }
+
+    
 }
 
 @media (min-width: 992px) {
@@ -609,8 +706,17 @@ h2{
         text-align: center;
     }
     /* sezione 3 vantaggi corso */
-    
+    .vantaggio{
+        margin-bottom: 48px;
+    }
 
+    .vantaggi .big-cta-button{
+        margin-top: 56px;
+    }
+
+    .vantaggi h2{
+        margin-bottom: 52px;
+    }
 }
 
 
@@ -630,10 +736,11 @@ h2{
         align-items: flex-start;
         gap: 48px;
         justify-content: space-between;
+        text-align: left;
     }
 
     .per-immersimed .text-container{
-        text-align: left;
+
         width: 280px;
     }
 
@@ -662,7 +769,8 @@ h2{
     }
     .under-hero{
         top: 232px;
-        width: calc(100% - 128px)
+        width: calc(100% - 128px);
+        max-width: 1400px
     } 
 
     /* sezione 2 perchè immersimed */

@@ -6,8 +6,13 @@
     $hero_text = get_theme_mod('front_page_hero_text', '');
     $hero_cta_text = get_theme_mod('front_page_hero_cta', '');
     $hero_social_proof = get_theme_mod('front_page_hero_social_proof', '');
-    $desktop_logo_url = get_theme_mod( 'desktop_logo' ); 
-
+    $desktop_logo_url = get_theme_mod( 'desktop_logo', ''); 
+    $sponsor_1_url= get_theme_mod( 'front_page_under_hero_image_1', ''); 
+    $sponsor_1_alt = get_alt($sponsor_1_url);
+    $sponsor_3_url= get_theme_mod( 'front_page_under_hero_image_3', ''); 
+    $sponsor_3_alt = get_alt($sponsor_3_url);
+    $sponsor_2_url= get_theme_mod( 'front_page_under_hero_image_2', ''); 
+    $sponsor_2_alt = get_alt($sponsor_2_url);
 ?>
 <main>
     <div class="wrapper">
@@ -34,13 +39,13 @@
             <figure id="hero-social-proof">
                 <div class="circle-container-wrapper" >
                     <div class="circle-img-container">
-                        <img  src="<?php echo get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto">
+                        <img  src="<?php echo get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto" loading="lazy">
                     </div> 
                     <div class="circle-img-container">
-                        <img  src="<?php echo  get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto">
+                        <img  src="<?php echo  get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto" loading="lazy">
                     </div>  
                     <div class="circle-img-container">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/white.png' ?>" alt="Vincenzo Vitale Foto" loading="lazy"v>
                     </div> 
                 </div>
                 <figcaption><?php echo wp_kses_post($hero_social_proof); ?> </figcaption>
@@ -53,9 +58,9 @@
             <div class="content">
                 <span>Parlano di noi</span>
                 <figure>
-                    <img src="<?php echo esc_url( $desktop_logo_url ); ?>" alt="" width="150px">
-                    <img src="<?php echo esc_url( $desktop_logo_url ); ?>" alt="" width="150px">
-                    <img src="<?php echo esc_url( $desktop_logo_url ); ?>" alt="" width="150px">
+                    <img src="<?php echo esc_url( $sponsor_1_url ); ?>" alt="<?php echo esc_attr( $sponsor_1_url ); ?>" width="150px" loading="lazy">
+                    <img src="<?php echo esc_url( $sponsor_2_url ); ?>" alt="<?php echo esc_attr( $sponsor_2_url ); ?>" width="150px" loading="lazy">
+                    <img src="<?php echo esc_url( $sponsor_3_url ); ?>" alt="<?php echo esc_attr( $sponsor_3_url ); ?>" width="150px" loading="lazy">
                 </figure>
             </div> 
         </div>
@@ -83,19 +88,19 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-head">
-                        <img src="<?php echo esc_url($per_card_1_url); ?>" alt="<?php echo esc_attr($per_card_1_alt); ?>" width="300">
+                        <img src="<?php echo esc_url($per_card_1_url); ?>" alt="<?php echo esc_attr($per_card_1_alt); ?>" width="300" loading="lazy">
                     </div>
                     <p class="card-body"><?php echo wp_kses_post($per_card_1_text); ?></p>
                 </div>
                 <div class="card shifted">
                     <div class="card-head ">
-                        <img src="<?php echo esc_url($per_card_2_url); ?>" alt="<?php echo esc_attr($per_card_2_alt); ?>" width="300">
+                        <img src="<?php echo esc_url($per_card_2_url); ?>" alt="<?php echo esc_attr($per_card_2_alt); ?>" width="300" loading="lazy">
                     </div>
                     <p class="card-body"><?php echo wp_kses_post($per_card_2_text); ?></p>
                 </div>
                 <div class="card">
                     <div class="card-head">
-                        <img src="<?php echo esc_url($per_card_3_url); ?>" alt="<?php echo esc_attr($per_card_3_alt); ?>" width="300">
+                        <img src="<?php echo esc_url($per_card_3_url); ?>" alt="<?php echo esc_attr($per_card_3_alt); ?>" width="300" loading="lazy">
                     </div>
                     <p class="card-body"><?php echo wp_kses_post($per_card_3_text); ?></p>
                 </div>
@@ -135,24 +140,24 @@
             </div>
             <div class="vantaggio">
                 <div class="vt-image-container vt-desktop">
-                    <img src="<?php echo esc_url($van_2_url); ?>" alt="<?php echo esc_attr($van_2_alt); ?>">
+                    <img src="<?php echo esc_url($van_2_url); ?>" alt="<?php echo esc_attr($van_2_alt); ?>" loading="lazy">
                 </div>
                 <div class="content">
                     <h3><?php echo wp_kses_post($van_2_title); ?></h3>
                     <div  class="vt-image-container vt-mobile">
-                        <img src="<?php echo esc_url($van_2_url); ?>" alt="<?php echo esc_attr($van_2_alt); ?>" >
+                        <img src="<?php echo esc_url($van_2_url); ?>" alt="<?php echo esc_attr($van_2_alt); ?>" loading="lazy" >
                     </div>
                     <p><?php echo wp_kses_post($van_2_description); ?></p>
                 </div>
             </div>
             <div class="vantaggio">
                 <div class="vt-image-container vt-desktop">
-                    <img src="<?php echo esc_url($van_3_url); ?>" alt="<?php echo esc_attr($van_3_alt); ?>">
+                    <img src="<?php echo esc_url($van_3_url); ?>" alt="<?php echo esc_attr($van_3_alt); ?>" loading="lazy">
                 </div>
                 <div class="content">
                     <h3><?php echo wp_kses_post($van_3_title); ?></h3>
                     <div  class="vt-image-container vt-mobile">
-                        <img src="<?php echo esc_url($van_3_url); ?>" alt="<?php echo esc_attr($van_3_alt); ?>" >
+                        <img src="<?php echo esc_url($van_3_url); ?>" alt="<?php echo esc_attr($van_3_alt); ?>" loading="lazy">
                     </div>
                     <p><?php echo wp_kses_post($van_3_description); ?></p>
                 </div>
@@ -160,8 +165,66 @@
             <a href="#" class="big-cta-button"><?php echo  esc_attr($van_cta_text); ?></a>
         </div>
     </section>
+    <?php
+        $rece_section_title = get_theme_mod('front_page_rece_section_title', '');
+        $rece_1_img_url = get_theme_mod('front_page_rece_1_img');
+        $rece_1_img_alt = get_alt($rece_1_img_url);
+        $rece_2_img_url = get_theme_mod('front_page_rece_2_img');
+        $rece_2_img_alt = get_alt($rece_2_img_url);
+        $rece_3_img_url = get_theme_mod('front_page_rece_3_img');
+        $rece_3_img_alt = get_alt($rece_3_img_url);
+        $rece_4_img_url = get_theme_mod('front_page_rece_4_img');
+        $rece_4_img_alt = get_alt($rece_4_img_url);
+        $rece_5_img_url = get_theme_mod('front_page_rece_5_img');
+        $rece_5_img_alt = get_alt($rece_5_img_url);
+        $rece_6_img_url = get_theme_mod('front_page_rece_6_img');
+        $rece_6_img_alt = get_alt($rece_6_img_url);
+        $rece_7_img_url = get_theme_mod('front_page_rece_7_img');
+        $rece_7_img_alt = get_alt($rece_7_img_url);
+        $rece_8_img_url = get_theme_mod('front_page_rece_8_img');
+        $rece_8_img_alt = get_alt($rece_8_img_url);
+        $rece_9_img_url = get_theme_mod('front_page_rece_9_img');
+        $rece_9_img_alt = get_alt($rece_9_img_url);
+    ?>
     <section class="recensioni">
-   
+        <div class="wrapper">
+            <h2><?php echo esc_html($rece_section_title) ?></h2>
+            <div class="recensioni-container">
+                <div class="faders">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div> 
+                <div class="recensioni-cards">
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_1_img_url); ?>" alt="<?php echo esc_attr($rece_1_img_alt); ?> " loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_2_img_url); ?>" alt="<?php echo esc_attr($rece_2_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_3_img_url); ?>" alt="<?php echo esc_attr($rece_3_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_4_img_url); ?>" alt="<?php echo esc_attr($rece_4_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_5_img_url); ?>" alt="<?php echo esc_attr($rece_5_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_6_img_url); ?>" alt="<?php echo esc_attr($rece_6_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_7_img_url); ?>" alt="<?php echo esc_attr($rece_7_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_8_img_url); ?>" alt="<?php echo esc_attr($rece_8_img_alt); ?>" loading="lazy">
+                    </div>
+                    <div class="entry">
+                        <img src="<?php echo esc_url($rece_9_img_url); ?>" alt="<?php echo esc_attr($rece_9_img_alt); ?>" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <?php
         $faq_section_title = get_theme_mod('front_page_faq_section_title', '');
@@ -177,46 +240,48 @@
         $faq_a_5 = get_theme_mod('front_page_faq_a_5', '');
         $faq_cta_text = get_theme_mod('front_page_faq_cta_text', '');
     ?>
-    <section class="faq wrapper"> 
-        <h2><?php echo esc_html($faq_section_title) ?></h2>
-        <ul class="accordion">
-            <li class="accordion-item">
-                <div class="accordion-header"><?php echo esc_html($faq_q_1) ?> <span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span> </div>
-                <div class="accordion-content">
-                    <hr>
-                    <p><?php echo esc_textarea($faq_a_1) ?> </p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-header"><?php echo esc_html($faq_q_2) ?> <span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
-                <div class="accordion-content">
-                    <hr>
-                    <p><?php echo esc_textarea($faq_a_2) ?></p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-header"><?php echo esc_html($faq_q_3) ?> <span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
-                <div class="accordion-content">
-                    <hr>
-                    <p><?php echo esc_textarea($faq_a_3) ?></p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-header"><?php echo esc_html($faq_q_4) ?><span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
-                <div class="accordion-content">
-                    <hr>
-                    <p><?php echo esc_textarea($faq_a_4) ?></p>
-                </div>
-            </li>
-            <li class="accordion-item">
-                <button class="accordion-header"><?php echo esc_html($faq_q_5) ?><span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
-                <div class="accordion-content">
-                    <hr>
-                    <p><?php echo esc_textarea($faq_a_5)?></p>
-                </div>
-            </li>
-        </ul>
-        <a href="#" class="big-cta-button"><?php echo  esc_attr($faq_cta_text); ?></a>
+    <section class="faq "> 
+        <div class="wrapper">
+            <h2><?php echo esc_html($faq_section_title) ?></h2>
+            <ul class="accordion">
+                <li class="accordion-item">
+                    <div class="accordion-header"><?php echo esc_html($faq_q_1) ?> <span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span> </div>
+                    <div class="accordion-content">
+                        <hr>
+                        <p><?php echo esc_textarea($faq_a_1) ?> </p>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <button class="accordion-header"><?php echo esc_html($faq_q_2) ?> <span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
+                    <div class="accordion-content">
+                        <hr>
+                        <p><?php echo esc_textarea($faq_a_2) ?></p>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <button class="accordion-header"><?php echo esc_html($faq_q_3) ?> <span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
+                    <div class="accordion-content">
+                        <hr>
+                        <p><?php echo esc_textarea($faq_a_3) ?></p>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <button class="accordion-header"><?php echo esc_html($faq_q_4) ?><span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
+                    <div class="accordion-content">
+                        <hr>
+                        <p><?php echo esc_textarea($faq_a_4) ?></p>
+                    </div>
+                </li>
+                <li class="accordion-item">
+                    <button class="accordion-header"><?php echo esc_html($faq_q_5) ?><span><svg width="68px" height="68px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.12000000000000002"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#ffffff" stroke-width="0.24000000000000005"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.79289 6.29289C9.18342 5.90237 9.81658 5.90237 10.2071 6.29289L15.2071 11.2929C15.5976 11.6834 15.5976 12.3166 15.2071 12.7071L10.2071 17.7071C9.81658 18.0976 9.18342 18.0976 8.79289 17.7071C8.40237 17.3166 8.40237 16.6834 8.79289 16.2929L13.0858 12L8.79289 7.70711C8.40237 7.31658 8.40237 6.68342 8.79289 6.29289Z" fill="#ffffff"></path> </g></svg></span></button>
+                    <div class="accordion-content">
+                        <hr>
+                        <p><?php echo esc_textarea($faq_a_5)?></p>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="big-cta-button"><?php echo  esc_attr($faq_cta_text); ?></a>
+        </div>
     </section>
 
     
