@@ -6,7 +6,7 @@ Author: Giovanni J. Speranza
  */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600;700&display=swap');
 
 :root {
     --darker-main-5: #3E5555;
@@ -21,7 +21,8 @@ Author: Giovanni J. Speranza
     --dirty-white: #F5F5F5;
     --gothic-demi: 'all-round-gothic-demi', sans-serif;
     --gothic-bold: 'all-round-gothic-bold', sans-serif;
-    --montserrat: 'Montserrat Alternates', sans-serif;
+    /* it's not anymore montserrat */
+    --montserrat: 'Lexend Deca', sans-serif;  
 }
 
 
@@ -71,6 +72,10 @@ figure{
     margin: 0;
 }
 
+h1{
+    font-family: var(--gothic-bold);
+    font-size: 4rem ; 
+}
 h2{
     font-family: var(--gothic-bold);
     font-size: 3rem ;

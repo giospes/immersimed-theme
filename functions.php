@@ -10,7 +10,7 @@ add_action('after_setup_theme', 'theme_support');
 
 function menus() {
     $location = array(
-        'primary' => "Desktop Primary Left Sidebar",
+        'primary' => "Desktop Primary Header Menu",
         'footer' =>"Footer Menu Items"
     );
 
@@ -28,10 +28,20 @@ function enqueue_style() {
     // Enqueue Custom CSS (style.css)
     wp_enqueue_style('style', get_stylesheet_uri() , array(), $version, 'all');
     wp_enqueue_style('header-css', get_template_directory_uri('style') . '/assets/css/header.css', array('style'), $version, 'all');
-    wp_enqueue_style('front-page-css', get_template_directory_uri('style') . '/assets/css/front-page.css', array('style'), $version, 'all');
     wp_enqueue_style('footer-css', get_template_directory_uri('style') . '/assets/css/footer.css', array('style'), $version, 'all');
+    if (!is_front_page()) {
+        wp_enqueue_style('pages-style', get_template_directory_uri('style') . '/assets/css/page.css');
+        if(is_page('Contatti')){
+            wp_enqueue_style('contatti-style', get_template_directory_uri('style') . '/assets/css/contatti.css');
+        }
+        if(is_single()){
+            wp_enqueue_style('single-style', get_template_directory_uri('style') . '/assets/css/single.css');
+        }
+    }
+    else{
+        wp_enqueue_style('front-page-css', get_template_directory_uri('style') . '/assets/css/front-page.css', array('style'), $version, 'all');
+    }
     
-
 
 
 }
@@ -40,11 +50,14 @@ add_action('wp_enqueue_scripts', 'enqueue_style');
 function enqueue_js() {
     
     $version = wp_get_theme()->get('Version');
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.min.js', array(''), $version, true);
+   
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), $version, true);
 
     wp_enqueue_script('header-js', get_template_directory_uri() . '/assets/js/header.js', array('jquery'), $version, true);
-    wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array('jquery'), $version, true);
+
+    if(is_front_page()){
+        wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array('jquery'), $version, true);
+    }
 }
 add_action('wp_enqueue_scripts', 'enqueue_js');
 
@@ -736,7 +749,7 @@ add_action('customize_register', 'custom_theme_customizer_settings');
 
 function get_alt($img_url){
 
-      // Get the attachment ID for the image using its URL
+    // Get the attachment ID for the image using its URL
     $attachment_id = attachment_url_to_postid( $img_url );
     // Get the alt text for the attachment
     $alt_text = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );

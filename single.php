@@ -1,7 +1,7 @@
 <?php
     get_header()
 ?>
-<main>
+<main class="pg-wrapper">
     <article>
         <?php
             if(have_posts()){
