@@ -33,8 +33,7 @@
                 ?>             
              
                 <picture >
-                    <source media="(max-width: 400px)" srcset="<?php echo esc_url( $mobile_logo_url );  ?>" width="90" height="38"  id="mobile-logo-img">
-                    <source media="(max-width: 550px)" srcset="<?php echo esc_url( $mobile_logo_url );  ?>" width="136" height="58"   id="mobile-logo-img">
+                    <source media="(max-width: 550px)" srcset="<?php echo esc_url( $mobile_logo_url );  ?>" width="90" height="38"  id="mobile-logo-img">  
                     <img  id="desktop-logo-img" src="<?php echo esc_url( $desktop_logo_url ); ?>"  width="345"  alt="Logo Immersimed">
                 </picture>
                 

@@ -58,6 +58,9 @@ function enqueue_js() {
     if(is_front_page()){
         wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array('jquery'), $version, true);
     }
+    if(is_single()){
+        wp_enqueue_script('single-js', get_template_directory_uri() . '/assets/js/single.js', array('jquery'), $version, true);
+    }
 }
 add_action('wp_enqueue_scripts', 'enqueue_js');
 

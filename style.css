@@ -92,11 +92,16 @@ h3{
     max-width: calc(1400px + 128px)!important;
 }
 
+main{
+    margin-top: 60px;
+}
 
-
-@media (min-width: 570px) {
+@media (min-width: 550px) {
     .wrapper{
         padding: 0 16px;
+    }
+    main{
+        margin-top: 62.03px;
     }
 }
 
@@ -104,11 +109,17 @@ h3{
     .wrapper{
         padding: 0 32px;
     }
+    main{
+        margin-top: 66.5px;
+    }
 }
 
 @media (min-width: 1200px) {
     .wrapper{
         padding: 0 48px;
+    }
+    main{
+        margin-top: 78px;
     }
 }
 
@@ -116,5 +127,8 @@ h3{
     .wrapper{
         padding: 0 64px;
 
+    }
+    main{
+        margin-top: 93px;
     }
 }
