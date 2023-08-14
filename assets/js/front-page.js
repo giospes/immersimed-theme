@@ -25,16 +25,20 @@ function resumeAnimation() {
     animationPaused = false;
 }
 
-// Detect touchstart event and pause the animation
-recensioni_container.addEventListener('touchstart', () => {
-    pauseAnimation();
-});
+// // Detect touchstart event and pause the animation
+// recensioni_container.addEventListener('touchstart', () => {
+//     pauseAnimation();
+// });
 
-// Detect touchend event and resume the animation
-recensioni_container.addEventListener('touchend', () => {
-    resumeAnimation();
-});
+// // Detect touchend event and resume the animation
+// recensioni_container.addEventListener('touchend', () => {
+//     resumeAnimation();
+// });
   
+recensioni_container.addEventListener('touchstart', pauseAnimation, { passive: true });
+
+// Detect touchend event and resume the animation with passive listener
+recensioni_container.addEventListener('touchend', resumeAnimation, { passive: true });
   
   
   

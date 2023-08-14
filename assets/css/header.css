@@ -14,7 +14,7 @@ header{
     background-color: white;
     
 }
-picture{
+header picture{
     display: flex;
 }
 header a{

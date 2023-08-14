@@ -23,43 +23,44 @@
 <main>
     <div class="wrapper">
         <section class="hero ">
-        
-            <h1><?php echo esc_html($h1_text); ?></h1>
-            <?php if ($desktop_hero_img_url || $desktop_hero_img_url) : ?>
-                <div class="image-container">
-                    <picture>
-                        <!-- Mobile Image -->
-                        <source media="(max-width: 650px)" srcset="<?php echo esc_url($mobile_hero_img_url); ?>" width="300" height="180">
-                        <!-- Tablet Image -->
-                        <source media="(max-width: 992px)" srcset="<?php echo esc_url($tablet_hero_img_url); ?>" width="500" height="300">
-                        <!-- Desktop Image -->
-                        <source media="(min-width: 992px)" srcset="<?php echo esc_url($desktop_hero_img_url); ?>">
+            <div class="left-side">
+                <h1><?php echo esc_html($h1_text); ?></h1>
+                <?php if ($desktop_hero_img_url || $desktop_hero_img_url) : ?>
+                    <div class="image-container">
+                        <picture>
+                            <!-- Mobile Image -->
+                            <source media="(max-width: 650px)" srcset="<?php echo esc_url($mobile_hero_img_url); ?>" width="300" height="180">
+                            <!-- Tablet Image -->
+                            <source media="(max-width: 992px)" srcset="<?php echo esc_url($tablet_hero_img_url); ?>" width="500" height="300">
+                            
 
-                        <!-- Fallback Image for browsers that don't support <picture> -->
-                        <img src="<?php echo esc_url($desktop_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d">
-                    </picture>
-                </div>
-            <?php endif; ?>
-            
-            <p><?php echo wp_kses_post($hero_text); ?></p>
-            <a href="#" class="cta-button"><?php echo  wp_kses_post($hero_cta_text); ?></a>
-            <figure id="hero-social-proof">
-                <div class="circle-container-wrapper" >
-                    <div class="circle-img-container">
-                        <img  src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_1_alt); ?>" loading="lazy">
-                    </div> 
-                    <div class="circle-img-container">
-                        <img  src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_2_alt); ?>" loading="lazy">
-                    </div>  
-                    <div class="circle-img-container">
-                        <img src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt=<?php echo esc_url($hero_social_proof_img_3_alt); ?>" loading="lazy"v>
-                    </div> 
-                </div>
-                <figcaption><?php echo wp_kses_post($hero_social_proof); ?> </figcaption>
-            </figure>
-            
-            
-            
+                            <!-- Fallback Image for browsers that don't support <picture> -->
+                            <img src="<?php echo esc_url($desktop_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d" loading="lazy">
+                        </picture>
+                    </div>
+                <?php endif; ?>
+                
+                <p><?php echo wp_kses_post($hero_text); ?></p>
+                <a href="#" class="cta-button"><?php echo  wp_kses_post($hero_cta_text); ?></a>
+                <figure id="hero-social-proof">
+                    <div class="circle-container-wrapper" >
+                        <div class="circle-img-container">
+                            <img  src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_1_alt); ?>" loading="lazy">
+                        </div> 
+                        <div class="circle-img-container">
+                            <img  src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_2_alt); ?>" loading="lazy">
+                        </div>  
+                        <div class="circle-img-container">
+                            <img src="<?php echo esc_url($hero_social_proof_img_1); ?>" alt="<?php echo esc_url($hero_social_proof_img_3_alt); ?>" loading="lazy"v>
+                        </div> 
+                    </div>
+                    <figcaption><?php echo wp_kses_post($hero_social_proof); ?> </figcaption>
+                </figure>
+            </div>
+            <div class="right-side">
+                <img src="<?php echo esc_url($desktop_hero_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d" loading="lazy">
+            </div>    
+    
         </section>
         <div class="under-hero">
             <div class="content">

@@ -41,20 +41,8 @@
                     
                     while ($related_query->have_posts()) {
                         $related_query->the_post();
-                        $thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail');
-                        $thumbnail_url = $thumbnail_src[0];
-                        $thumbnail_alt = get_alt($thumbnail_url)
-                        ?>
-                        <div class="post-card">
-                            <div class="post-thumbnail">
-                                <img src="<?php echo $thumbnail_url?>" alt="<?php $thumbnail_alt?>" loading="lazy">
-                            </div>
-                            <div class="post-content">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                <span class="date-card"><?php echo the_modified_date(); ?></span>
-                            </div>
-                        </div>
-                        <?php
+                        get_template_part('template-parts/post', 'card');
+                        
                     }
                     wp_reset_postdata();
                 } 

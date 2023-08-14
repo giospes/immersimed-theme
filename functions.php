@@ -20,26 +20,24 @@ add_action('init', 'menus');
 
 function enqueue_style() {
     $version = wp_get_theme()->get('Version');
-
-    // Enqueue Bootstrap CSS
-    // wp_enqueue_style('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), '5.3.0', 'all');
-
-    // nel caso sposti il style.css cambia in get_template e il path
-    // Enqueue Custom CSS (style.css)
     wp_enqueue_style('style', get_stylesheet_uri() , array(), $version, 'all');
-    wp_enqueue_style('header-css', get_template_directory_uri('style') . '/assets/css/header.css', array('style'), $version, 'all');
-    wp_enqueue_style('footer-css', get_template_directory_uri('style') . '/assets/css/footer.css', array('style'), $version, 'all');
+    wp_enqueue_style('header-css', get_template_directory_uri() . '/assets/css/header.css', array('style'), $version, 'all');
+    wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css', array('style'), $version, 'all');
     if (!is_front_page()) {
-        wp_enqueue_style('pages-style', get_template_directory_uri('style') . '/assets/css/page.css');
+        wp_enqueue_style('pages-style', get_template_directory_uri() . '/assets/css/page.css');
         if(is_page('Contatti')){
-            wp_enqueue_style('contatti-style', get_template_directory_uri('style') . '/assets/css/contatti.css');
+            wp_enqueue_style('contatti-style', get_template_directory_uri() . '/assets/css/contatti.css');
         }
         if(is_single()){
-            wp_enqueue_style('single-style', get_template_directory_uri('style') . '/assets/css/single.css');
+            wp_enqueue_style('single-style', get_template_directory_uri() . '/assets/css/single.css');
+        }
+        if(is_home()){
+            wp_enqueue_style('index-style', get_template_directory_uri() . '/assets/css/index.css');
+
         }
     }
     else{
-        wp_enqueue_style('front-page-css', get_template_directory_uri('style') . '/assets/css/front-page.css', array('style'), $version, 'all');
+        wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('style'), $version, 'all');
     }
     
 
@@ -50,17 +48,21 @@ add_action('wp_enqueue_scripts', 'enqueue_style');
 function enqueue_js() {
     
     $version = wp_get_theme()->get('Version');
+    wp_enqueue_script('jquery');
    
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), $version, true);
 
     wp_enqueue_script('header-js', get_template_directory_uri() . '/assets/js/header.js', array('jquery'), $version, true);
 
-    if(is_front_page()){
+    if(!is_front_page()){
+        if(is_single()){
+            wp_enqueue_script('single-js', get_template_directory_uri() . '/assets/js/single.js', array('jquery'), $version, true);
+        }
+    }
+    else{
         wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array('jquery'), $version, true);
     }
-    if(is_single()){
-        wp_enqueue_script('single-js', get_template_directory_uri() . '/assets/js/single.js', array('jquery'), $version, true);
-    }
+    
 }
 add_action('wp_enqueue_scripts', 'enqueue_js');
 
@@ -98,6 +100,14 @@ function custom_theme_customizer_settings( $wp_customize ) {
         'label'    => 'Mobile Logo',
         'section'  => 'title_tagline',
         'settings' => 'mobile_logo',
+        
+    ) ) );
+
+    $wp_customize->add_setting( 'image_placeholder' );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_placeholder', array(
+        'label'    => 'Image Placeholder',
+        'section'  => 'title_tagline',
+        'settings' => 'image_placeholder',
         
     ) ) );
 
@@ -770,5 +780,7 @@ add_filter( 'upload_mimes', 'allow_svg_upload' );
 
 
 
+// Hide the admin bar for all users
+add_filter('show_admin_bar', '__return_false');
 
 

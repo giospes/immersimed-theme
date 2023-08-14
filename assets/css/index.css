@@ -1,0 +1,43 @@
+.sliding{
+    padding: 48px 0 0;
+}
+
+.slider {
+    padding: 32px 0;
+    display: flex;
+    gap: 32px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    
+}
+.slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+.post-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 250px; 
+    scroll-snap-align: start; 
+}
+
+.post-thumbnail{
+    height:  180px; 
+}
+
+.post-content{
+    height: 120px;
+    background-color: var(--lighter-main-3);
+    
+
+}
+
+.post-content  a{
+    font-size: 1.3rem;
+    color: var(--darker-main-5);
+}
+
+.date-card{
+    font-size: 1rem;
+}
