@@ -1,9 +1,11 @@
 <?php
     get_header()
 ?>
-<main class="pg-wrapper">
-    <h1 class="text-center">Tutti i Post</h1>
-    <article class="pg-flex wrap" >
+<main>
+    <h1 class="text-center">Post <?php single_cat_title(); ?></h1>   
+    <p class="pg-wrapper">Qui sono presenti tutti i post della categoria: <strong><?php single_cat_title(); ?></strong></p>
+
+    <article class="pg-wrapper pg-flex wrap pg-justify-content-center" >
         <?php
             if(have_posts()){
                 while ( have_posts()){

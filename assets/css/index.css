@@ -1,5 +1,11 @@
+
+.pg-wrapper{
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
 .sliding{
-    padding: 48px 0 0;
+    padding: 32px 0 0;
 }
 
 .slider {
@@ -40,4 +46,14 @@
 
 .date-card{
     font-size: 1rem;
+}
+
+.category-btn{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--darker-main);
+    padding: 1rem 2rem;
+    border-radius: 16px;
+      white-space: nowrap;
 }

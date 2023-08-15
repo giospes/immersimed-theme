@@ -10,7 +10,8 @@
     $thumbnail_alt = get_alt($thumbnail_url);
    
 ?>
-<div class="post-card">
+
+<div class="post-card" id="post-card-<?php the_ID(); ?>" data-permalink="<?php the_permalink(); ?>">
     <div class="post-thumbnail">
         <img src="<?php echo $thumbnail_url?>" alt="<?php $thumbnail_alt?>" loading="lazy">
     </div>

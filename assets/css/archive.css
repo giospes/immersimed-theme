@@ -1,0 +1,48 @@
+main p{
+    font-size: 2rem;
+    margin-top: 64px;
+    margin-bottom: 40px;
+
+}
+
+main{
+    margin-bottom: 80px;
+}
+
+article{
+    gap: 32px;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start; 
+}
+
+.post-thumbnail{
+    height:  180px; 
+    flex: 0 0 250px;
+}
+
+.post-content{
+    height: 120px;
+    background-color: var(--lighter-main-3);
+    
+
+}
+
+.post-content  a{
+    font-size: 1.3rem;
+    color: var(--darker-main-5);
+}
+
+.date-card{
+    font-size: 1rem;
+}
+
+@media (min-width: 554px) {
+    .pg-justify-content-center{
+        justify-content: flex-start;
+    }
+   
+}

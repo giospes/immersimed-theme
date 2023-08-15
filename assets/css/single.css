@@ -29,6 +29,8 @@ body{
 
 h1{
     color: var(--darker-main-2);
+    background-color: transparent;
+    padding: 0;
 }
 
 .general-info{

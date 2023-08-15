@@ -6,10 +6,10 @@
 </div>
 
 
-<main class="pg-wrapper">
-    <h1><?php the_title() ?></h1>
+<main >
+    <h1 class="pg-wrapper"><?php the_title() ?></h1>
 
-    <article>
+    <article class="pg-wrapper">
         <?php
             if(have_posts()){
                 while ( have_posts()){
