@@ -35,6 +35,9 @@ function enqueue_style() {
             wp_enqueue_style('index-style', get_template_directory_uri() . '/assets/css/index.css');
 
         }
+        if (is_archive()) {
+            wp_enqueue_style('archive-style', get_template_directory_uri() . '/archive.css');
+        }
     }
     else{
         wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('style'), $version, 'all');
@@ -91,6 +94,14 @@ function custom_theme_customizer_settings( $wp_customize ) {
         'label'    => 'Desktop Logo',
         'section'  => 'title_tagline',
         'settings' => 'desktop_logo',
+        
+    ) ) );
+
+    $wp_customize->add_setting( 'large_desktop_logo' );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'large_desktop_logo', array(
+        'label'    => 'Large Desktop Logo',
+        'section'  => 'title_tagline',
+        'settings' => 'large_desktop_logo',
         
     ) ) );
 

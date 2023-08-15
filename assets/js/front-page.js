@@ -9,6 +9,27 @@ accordionItems.forEach(item => {
   });
 });
 
+window.addEventListener('load', function() {
+  const imageContainer = document.querySelector('.right-side');
+  
+  function loadLargeImage() {
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth > 992) {
+      const largeImage = new Image();
+      largeImage.src = '<?php echo esc_url($desktop_hero_img_url); ?>'; // Replace with the actual image path
+      largeImage.alt = 'Large Image';
+      
+      imageContainer.appendChild(largeImage);
+    }
+  }
+  
+  loadLargeImage(); // Load image when the page loads
+  window.addEventListener('resize', loadLargeImage); // Load image when the window is resized
+});
+
+
+
 
 const recensioni_container = document.querySelector('.recensioni-cards');
 let animationPaused = false;

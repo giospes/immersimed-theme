@@ -1,4 +1,4 @@
-<h1><?php the_title(); ?></h1>
+
 <section class="general-info">
     <div class="author">
         <img src="<?php echo esc_url(get_avatar_url(get_the_author_meta('ID'))); ?>" alt="Author Avatar" width="48" height="48">

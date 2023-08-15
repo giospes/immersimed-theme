@@ -1,16 +1,7 @@
 <?php get_header(); ?>
 <main class="pg-wrapper">
     <h1 class="text-center"><?php echo get_the_title(get_option('page_for_posts')); ?></h1>
-    <!-- <section class="sliding post-in-evidenza">
-        <?php
-            if (have_posts()){
-                while (have_posts()){
-                    the_post();
-                    get_template_part('template-parts/content', 'archive');
-                }
-            }
-        ?>
-    </section> -->
+   
     <section class="sliding post-in-evidenza">
         <h2>Post in evidenza</h2>
         <div class="slider">        

@@ -24,6 +24,9 @@
     flex-direction: column;
 }
 
+.wrap{
+    flex-wrap: wrap;
+}
 .pg-justify-content-start{
     justify-content: flex-start;
 }

@@ -1,8 +1,2 @@
-<div class="bg-prymary">
-    
-    <?php the_excerpt();?> 
-    <a href="<?php the_permalink()  ?>"> ggg</a>
-
-    
-</div>
-
+<?php
+    get_template_part('template-parts/post', 'card');

@@ -6,3 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         navbarMenu.classList.toggle('show');
     });
 });
+
+document.getElementById('menuToggle').addEventListener('click', function() {
+    this.classList.toggle('open');
+  });
+  
