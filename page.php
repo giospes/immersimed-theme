@@ -6,8 +6,15 @@
         if(have_posts()){
             while ( have_posts()){
                 the_post();
-                get_template_part('template-parts/content', 'contact');
+                if (!is_page('Chi Siamo')) {
+                    
+                    get_template_part('template-parts/content', 'page');
+                } 
+                else{
+                    get_template_part('template-parts/content', 'chi-siamo');
+                }
             }
+
         }
     ?>
 </main>

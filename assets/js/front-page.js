@@ -9,24 +9,7 @@ accordionItems.forEach(item => {
   });
 });
 
-window.addEventListener('load', function() {
-  const imageContainer = document.querySelector('.right-side');
-  
-  function loadLargeImage() {
-    const windowWidth = window.innerWidth;
-    
-    if (windowWidth > 992) {
-      const largeImage = new Image();
-      largeImage.src = '<?php echo esc_url($desktop_hero_img_url); ?>'; // Replace with the actual image path
-      largeImage.alt = 'Large Image';
-      
-      imageContainer.appendChild(largeImage);
-    }
-  }
-  
-  loadLargeImage(); // Load image when the page loads
-  window.addEventListener('resize', loadLargeImage); // Load image when the window is resized
-});
+
 
 
 
@@ -46,15 +29,7 @@ function resumeAnimation() {
     animationPaused = false;
 }
 
-// // Detect touchstart event and pause the animation
-// recensioni_container.addEventListener('touchstart', () => {
-//     pauseAnimation();
-// });
 
-// // Detect touchend event and resume the animation
-// recensioni_container.addEventListener('touchend', () => {
-//     resumeAnimation();
-// });
   
 recensioni_container.addEventListener('touchstart', pauseAnimation, { passive: true });
 
@@ -65,4 +40,5 @@ recensioni_container.addEventListener('touchend', resumeAnimation, { passive: tr
   
   
   
+
 

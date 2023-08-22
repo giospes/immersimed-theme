@@ -96,6 +96,13 @@ main{
     margin-top: 60px;
 }
 
+.demi{
+    font-family: var(--gothic-demi);
+}
+
+.gothic-bold{
+    font-family: var(--gothic-bold);
+}
 @media (min-width: 550px) {
     .wrapper{
         padding: 0 16px;

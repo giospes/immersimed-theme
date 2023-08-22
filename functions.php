@@ -38,6 +38,9 @@ function enqueue_style() {
         if (is_archive()) {
             wp_enqueue_style('archive-style', get_template_directory_uri() . '/assets/css/archive.css', array('style'), $version, 'all');
         }
+        if(is_page('Chi Siamo')){
+            wp_enqueue_style('chi-siamo-style', get_template_directory_uri() . '/assets/css/chi-siamo.css', array('style'), $version, 'all');
+        }
     }
     else{
         wp_enqueue_style('front-page-css', get_template_directory_uri() . '/assets/css/front-page.css', array('style'), $version, 'all');
@@ -762,7 +765,147 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'label' => 'CTA text',
             ));
 
+        $wp_customize->add_panel('chi_siamo_panel', array(
+            'title' => 'Chi Siamo Panel',
+            'priority' => 2,
+        ));
+            $wp_customize->add_section(new WP_Customize_Section($wp_customize, 'hero_chi_siamo_section', array(
+                'title' => 'Hero Section',
+                'priority' => 11, // Adjust the priority to position the nested section
+                'panel' => 'chi_siamo_panel', // Specify the parent section's ID
+            )));
+            $wp_customize->add_setting('chi_siamo_hero_mobile_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'chi_siamo_hero_mobile_img', array(
+                'label' => 'Mobile Hero Image',
+                'section' => 'hero_chi_siamo_section',
+                'settings' => 'chi_siamo_hero_mobile_img',
+            )));
+
+            $wp_customize->add_setting('chi_siamo_hero_mobile_l_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'chi_siamo_hero_mobile_l_img', array(
+                'label' => 'Mobile Large Hero Image',
+                'section' => 'hero_chi_siamo_section',
+                'settings' => 'chi_siamo_hero_mobile_l_img',
+            )));
+
+            $wp_customize->add_setting('chi_siamo_hero_tablet_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'chi_siamo_hero_tablet_img', array(
+                'label' => 'Tablet Hero Image',
+                'section' => 'hero_chi_siamo_section',
+                'settings' => 'chi_siamo_hero_tablet_img',
+            )));
+            $wp_customize->add_setting('chi_siamo_hero_desktop_img', array(
+                'default' => '',
+                'sanitize_callback' => 'esc_url_raw',
+            ));
+        
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'chi_siamo_hero_desktop_img', array(
+                'label' => 'Desktop Hero Image',
+                'section' => 'hero_chi_siamo_section',
+                'settings' => 'chi_siamo_hero_desktop_img',
+            )));
+         
+            $wp_customize->add_setting('sede_op', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('sede_op', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'Sede Operativa',
+            ));
+
+            $wp_customize->add_setting('p_iva', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('p_iva', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'P. I. text ',
+            ));
+
+            $wp_customize->add_setting('telefono_nr', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('telefono_nr', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'Nr Telefofono ',
+            ));
             
+            $wp_customize->add_setting('email', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('email', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'Email ',
+            ));
+
+            $wp_customize->add_setting('ig_link', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('ig_link', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'IG Link ',
+            ));
+
+            $wp_customize->add_setting('fb_link', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('fb_link', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'FB Link ',
+            ));
+
+            $wp_customize->add_setting('yt_link', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('yt_link', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'YT Link ',
+            ));
+
+            $wp_customize->add_setting('ld_link', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('ld_link', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'LD Link ',
+            ));
+    
+            
+        
 
     
 }
@@ -795,3 +938,29 @@ add_filter( 'upload_mimes', 'allow_svg_upload' );
 add_filter('show_admin_bar', '__return_false');
 
 
+function custom_picture_shortcode() {
+    $desktop_hero_img_url = get_theme_mod('chi_siamo_hero_desktop_img', '');
+    $tablet_hero_img_url = get_theme_mod('chi_siamo_hero_tablet_img', '');
+    $mobile_l_hero_img_url = get_theme_mod('chi_siamo_hero_mobile_l_img', '');
+    $mobile_hero_img_url = get_theme_mod('chi_siamo_hero_mobile_img', '');
+    $hero_img_alt = 'Chi siamo hero immagine';
+
+    ob_start(); // Start output buffering
+
+    // Output the <picture> element with dynamic image URLs
+    ?>
+    <div class="img-container">
+        <picture>
+            <source media="(max-width: 424px)" srcset="<?php echo esc_url($mobile_hero_img_url); ?>" width="376" height="376">
+            <source media="(min-width: 425px) and (max-width: 649px)" srcset="<?php echo esc_url($mobile_l_hero_img_url); ?>" width="426" height="360">
+            <source media="(min-width: 650px) and (max-width: 991px)" srcset="<?php echo esc_url($tablet_hero_img_url); ?>" width="350" height="350">
+            <source media="(min-width: 992px)  and (max-width: 1199px)" srcset="<?php echo esc_url($desktop_hero_img_url); ?>" width="536" height="402">
+            <source media="(min-width: 1200px)" srcset="<?php echo esc_url($desktop_hero_img_url); ?>" width="584" height="438">
+            <img src="<?php echo esc_url($tablet_hero_img_url); ?>" alt="<?php echo esc_attr($hero_img_alt); ?>">
+        </picture>
+    </div>
+    <?php
+
+    return ob_get_clean(); // Return the buffered output
+}
+add_shortcode('custom_picture', 'custom_picture_shortcode');

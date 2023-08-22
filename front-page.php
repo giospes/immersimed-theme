@@ -25,25 +25,25 @@
         <section class="hero ">
             <div class="left-side">
                 <h1><?php echo esc_html($h1_text); ?></h1>
-                <?php if ($desktop_hero_img_url || $desktop_hero_img_url) : ?>
+
                     <div class=" mobile-image-container">
-                    <?php if (wp_is_mobile()) : ?>
+                    
                         <picture>
                             <!-- Mobile Image -->
                             <source media="(max-width: 650px)" srcset="<?php echo esc_url($mobile_hero_img_url); ?>" width="300" height="180" >
                             <!-- Tablet Image -->
-                            <source media="(max-width: 992px)" srcset="<?php echo esc_url($tablet_hero_img_url); ?>"  >
+                            <source media="(max-width: 991px)" srcset="<?php echo esc_url($tablet_hero_img_url); ?>"  >
                             
 
                             <!-- Fallback Image for browsers that don't support <picture> -->
                             <img src="<?php echo esc_url($tablet_hero_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d" width="500" height="300">
                         </picture>
-                    <?php endif; ?>  
+                  
                     </div>
-                <?php endif; ?>
+
                 
                 <p><?php echo wp_kses_post($hero_text); ?></p>
-                <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contatti' ) ) ); ?>" class="cta-button" aria-label="Corso TOLC-Med - Ricevi una consulenza gratuita"><?php echo  wp_kses_post($hero_cta_text); ?></a>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_title( 'Contatti' ) ) ); ?>" class="cta-button" aria-label="Corso TOLC-Med - Ricevi una consulenza gratuita"><?php echo  wp_kses_post($hero_cta_text); ?></a>
                 <figure id="hero-social-proof">
                     <div class="circle-container-wrapper" >
                         <div class="circle-img-container">
@@ -59,11 +59,14 @@
                     <figcaption><?php echo wp_kses_post($hero_social_proof); ?> </figcaption>
                 </figure>
             </div>
-            <?php if (!wp_is_mobile()) : ?>
-                <div class="right-side">
-                    <img src="<?php echo esc_url($desktop_hero_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d" loading="lazy">
-                </div>  
-            <?php endif; ?>  
+            <?php
+            // Get the window width using JavaScript and pass it to PHP
+                $window_width = '<script type="text/javascript">document.write(window.innerWidth);</script>';
+            ?>
+            <div class="right-side">
+                <img src="<?php echo esc_url($desktop_hero_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d" loading="lazy">
+            </div>  
+          
     
         </section>
         <div class="under-hero">

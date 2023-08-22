@@ -11,11 +11,8 @@ main{
 .hero{
     position: relative;
     text-align: center;
-    border-radius: 38px; 
     background: radial-gradient(64.63% 30.29% at 50.00% 41.11%, #95DBDB 20.67%, #38A9A8 74.43%);
-    padding: 30px 32px;
-    
-    
+    padding: 30px 32px;  
     color: white;
     z-index: 2;
     margin-bottom:  64px ;
@@ -119,13 +116,13 @@ h1{
 }
 .circle-img-container:first-child{
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
 
 .circle-img-container:nth-child(2){
     position: relative;
     left: -50%;
-    z-index: 2;
+    z-index: 1;
 }
 .circle-img-container:nth-child(3){
     position: relative;
@@ -519,18 +516,18 @@ h2{
     }
     .circle-img-container:first-child{
         position: relative;
-        z-index: 3;
+
     }
 
     .circle-img-container:nth-child(2){
         position: relative;
         left: -50%;
-        z-index: 2;
+
     }
     .circle-img-container:nth-child(3){
         position: relative;
         left: -50%;
-        z-index: 3;
+
     }
     .hero .cta-button{
         max-width: 500px;
@@ -658,7 +655,7 @@ h2{
 
     .hero .cta-button{
 
-        margin: 48px 0;
+        margin: 32px 0;
         width: 300px;
         
     }
@@ -680,14 +677,19 @@ h2{
         margin-right: 50px ;
 
     }
+    .circle-img-container:first-child{
+        z-index: 1;
+    }
 
     .circle-img-container:nth-child(2){
         position: absolute;
         left: 50%;
+        z-index: 2;
     }
     .circle-img-container:nth-child(3){
         position: absolute;
-        left: 100%
+        left: 100%;
+        z-index: 3;
     }
    
     .under-hero{
@@ -795,7 +797,7 @@ h2{
         flex: 0 1 50%
     }
     .hero .cta-button{
-        margin: 60px 0;
+        margin: 48px 0;
         
     }
     .under-hero{

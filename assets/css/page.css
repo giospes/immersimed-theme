@@ -1,14 +1,15 @@
 
 
 .pg-wrapper{
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     max-width: calc(1200px + 128px );
     margin-left: auto;
     margin-right: auto ;
 }
 
 .gs-navbar{
-    max-width: calc(1210px + 128px )!important;
+    max-width: calc(1200px + 128px )!important;
 
 }
 
@@ -122,7 +123,8 @@ h3{
 }
 @media (min-width: 992px){
     .pg-wrapper{
-        padding:0 32px ;
+        padding-left: 32px;
+        padding-right: 32px;
     }
     h1{
         font-size: 4rem;
@@ -138,7 +140,8 @@ h3{
 }
 @media (min-width: 1200px){
     .pg-wrapper{
-        padding:0 48px ;
+        padding-left: 48px;
+        padding-right: 48px;
     }
     
 }
