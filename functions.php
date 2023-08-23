@@ -139,11 +139,11 @@ function custom_theme_customizer_settings( $wp_customize ) {
             // H1 Text
             $wp_customize->add_setting('front_page_h1', array(
                 'default' => '',
-                'sanitize_callback' => 'sanitize_text_field',
+                'sanitize_callback' => 'wp_kses_post',
             ));
 
             $wp_customize->add_control('front_page_h1', array(
-                'type' => 'text',
+                'type' => 'textarea',
                 'section' => 'front_page_hero',
                 'label' => 'Front Page H1',
             ));
@@ -903,6 +903,17 @@ function custom_theme_customizer_settings( $wp_customize ) {
                 'section' => 'title_tagline',
                 'label' => 'LD Link ',
             ));
+
+            $wp_customize->add_setting('about', array(
+                'default' => '',
+                'sanitize_callback' => 'sanitize_text_field',
+            ));
+
+            $wp_customize->add_control('about', array(
+                'type' => 'text',
+                'section' => 'title_tagline',
+                'label' => 'About Company max(200char)',
+            ));
     
             
         
@@ -964,3 +975,8 @@ function custom_picture_shortcode() {
     return ob_get_clean(); // Return the buffered output
 }
 add_shortcode('custom_picture', 'custom_picture_shortcode');
+
+
+// Disable automatic character replacement in WordPress text controls
+
+

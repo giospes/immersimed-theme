@@ -2,13 +2,14 @@ main{
     position: relative;
     font-weight: 400;
     text-align: left;
+    font-family: var(--montserrat);
+
   
 }
 
 h1{
     background-color: transparent;
     font-size: 2rem;
-    font-family: var(--montserrat);
     font-weight: 600;
 }
 

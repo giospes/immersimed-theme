@@ -12,13 +12,17 @@ header{
     
     z-index: 999;
     background-color: white;
-    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 header picture{
     display: flex;
 }
 header a{
     color: var(--darker-main-5);
+}
+header a:hover{
+    color: var(--darker-main-3)
+
 }
 
 .gs-navbar{

@@ -68,6 +68,7 @@ a{
     text-decoration: none;
 }
 
+
 figure{
     margin: 0;
 }
@@ -99,7 +100,10 @@ main{
 .demi{
     font-family: var(--gothic-demi);
 }
-
+.lexend{
+    font-family: var(--montserrat);
+    font-weight: 500;
+}
 .gothic-bold{
     font-family: var(--gothic-bold);
 }

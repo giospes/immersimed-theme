@@ -5,6 +5,11 @@ $p_iva = get_theme_mod('p_iva', '');
 $telefono_nr = get_theme_mod('telefono_nr', '');
 $email = get_theme_mod('email', '');
 $ig_link= get_theme_mod('ig_link', '');
+$about = get_theme_mod('about', '');
+$_SESSION['sede'] = $sede;
+$_SESSION['telefono_nr'] = $telefono_nr;
+$_SESSION['email']= $email;
+
 $fb_link= get_theme_mod('fb_link', '');
 $yt_link= get_theme_mod('yt_link', '');
 $ld_link= get_theme_mod('ld_link', '');
@@ -15,7 +20,7 @@ $ld_link= get_theme_mod('ld_link', '');
       <div class="footer-left">
         <div id="footer-logo-bg">
 
-        <img  id="mobile-logo-img" src="<?php echo esc_url( $_SESSION['mobile_logo_url'] ); ?>"  width="130"  height="52" alt="Immersimed Logo - Immersimed sotto e un visore sopra"> 
+        <img  id="mobile-logo-img" src="<?php echo esc_url( $_SESSION['mobile_logo_url'] ); ?>"  width="130"  height="52" alt="Immersimed Logo - Immersimed sotto e un visore sopra" loading="lazy"> 
       </div>
       
         
@@ -52,7 +57,7 @@ $ld_link= get_theme_mod('ld_link', '');
             </svg>
           <p><a href="<?php echo esc_attr($telefono_nr); ?>"></a><?php echo esc_html($telefono_nr); ?></p>
         </div>
-        <div>
+        <div class='info-svg-container-text'>
             
             
           <p>P.I. <?php echo esc_html($p_iva); ?></p>
@@ -71,7 +76,7 @@ $ld_link= get_theme_mod('ld_link', '');
 
         <p class="footer-company-about">
           <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          <?php echo esc_html($about);?>
         </p>
 
         <div class="footer-icons">

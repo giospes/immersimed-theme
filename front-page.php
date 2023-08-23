@@ -24,7 +24,7 @@
     <div class="wrapper">
         <section class="hero ">
             <div class="left-side">
-                <h1><?php echo esc_html($h1_text); ?></h1>
+                <h1><?php echo wp_kses_post($h1_text) ?></h1>
 
                     <div class=" mobile-image-container">
                     
@@ -64,7 +64,7 @@
                 $window_width = '<script type="text/javascript">document.write(window.innerWidth);</script>';
             ?>
             <div class="right-side">
-                <img src="<?php echo esc_url($desktop_hero_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d" loading="lazy">
+                <img src="<?php echo esc_url($desktop_hero_img_url); ?>" alt="Hero main Image - Ragazzo di medicina con visore e un cuore 3d">
             </div>  
           
     

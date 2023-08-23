@@ -82,6 +82,10 @@ h1{
     padding-bottom: 48px;
 }
 
+.related-posts a {
+    color: var(--darker-main-5);
+}
+
 .related-posts h2{
     margin-bottom: 24px;
 }

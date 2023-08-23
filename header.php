@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header  >
+    <header id="fixed-header" >
         <nav class="gs-navbar ">
            
             <a class="gs-navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
